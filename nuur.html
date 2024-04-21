@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Site</title>
+    <style>
+        /* Adjusted CSS for cleaner appearance and search bar alignment */
+body {
+    font-family: 'Roboto', sans-serif; /* Use Roboto font */
+    margin: 0;
+    padding: 0;
+    background-color: #f3f3f3; /* Light gray background */
+}
+
+header {
+    background-color: #0056b3; /* Blue header */
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#date-news {
+    color: #ccc;
+    font-size: 14px;
+    margin-top: 5px;
+    text-align: right;
+}
+
+#date-news a {
+    color: #ccc;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+#date-news a:hover {
+    color: #fff;
+}
+
+nav {
+    background-color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+    border-bottom: 2px solid #ddd;
+    display: flex; /* Display nav items in a flex container */
+    align-items: center; /* Vertically center nav items */
+}
+
+nav a {
+    color: #0056b3;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #003366;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Push the search container to the right */
+}
+
+.search-container input[type=text] {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 200px;
+}
+
+.search-container button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.search-container button:hover {
+    background-color: #45a049;
+}
+
+section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.rightcolumn {
+    width: 30%; /* Adjust width for the side column */
+    box-sizing: border-box; /* Ensure box-sizing includes padding and border */
+    padding: 20px; /* Add padding to the side column */
+}
+
+#main-content {
+    width: 65%; /* Adjust width for the main content */
+    box-sizing: border-box; /* Ensure box-sizing includes padding and border */
+    padding: 20px; /* Add padding to the main content */
+}
+
+.box {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+article {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+article:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+footer {
+    background-color: #0056b3;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Breaking News */
+#top-news {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    max-height: 300px;
+}
+
+.news-item {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.news-item:last-child {
+    border-bottom: none;
+}
+
+.news-item img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.news-item h3 {
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.news-item p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+/* Adjust font size for article and interview titles */
+article h3,
+#interview h3 {
+    font-size: 24px;
+    margin-top: 0;
+}
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="logo">NEWS SITE</h1>
+        <div id="date-news">Өмнөх 7 хоногт: 
+            <a href="#2024-04-19">19Баасан</a>
+            <a href="#2024-04-18">18Пүрэв</a>
+            <a href="#2024-04-17">17Лхагва</a>
+            <a href="#2024-04-16">16Мягмар</a>
+            <a href="#2024-04-15">15Даваа</a>
+            <a href="#2024-04-14">14Ням</a>
+        </div>
+    </header>
+    <nav>
+        <a href="#home">Нүүр</a>
+        <a href="#law">Хууль</a>
+        <a href="#politics">Улс төр</a>
+        <a href="#economy">Эдийн засаг</a>
+        <a href="#health">Эрүүл мэнд</a>
+        <a href="#sport">Спорт</a>
+        <a href="#education">Боловсрол</a>
+        <a href="#community">Нийгэм</a>
+        <a href="#domestic">Орон нутаг</a>
+        <a href="#international">Гадаад мэдээ</a>
+        <a href="#science">Шинжлэх Ухаан</a>
+        <div class="search-container">
+            <input type="text" placeholder="Search...">
+            <button type="submit">Search</button>
+        </div>
+    </nav>
+    <section>
+        <div class="rightcolumn">
+            <div class="card">
+                <h2>Breaking News</h2>
+                <div id="top-news" class="news-container">
+                    <div class="news-item">
+                        <img src="image1.jpg" alt="News Image">
+                        <h3>Он гарсаар “11-11” төвд нийгмийн даатгалын асуудлаар 1029 гомдол иржээ</h3>
+                        <p>22 цаг12</p>
+                    </div>
+                    <div class="news-item">
+                        <img src="image2.jpg" alt="News Image">
+                        <h3>Таван шарын нүхэн гарцын хөдөлгөөнийг зургаадугаар сард нээнэ</h3>
+                        <p>22 цаг21</p>
+                    </div>
+                    <div class="news-item">
+                        <img src="image3.jpg" alt="News Image">
+                        <h3>ГҮМҮДА-Тэр ертөнц</h3>
+                        <p>22 цаг32</p>
+                    </div>
+                    <!-- Add more news items -->
+                </div>
+            </div>
+        </div>
+        <div id="main-content">
+            <!-- Your main content goes here -->
+            <section id="article" class="box">
+                <h2>Article</h2>
+                <article>
+                    <h3>The Importance of Exercise</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam erat volutpat.</p>
+                </article>
+            </section>
+            <section id="interview" class="box">
+                <h2>Interview</h2>
+                <article>
+                    <h3>Exclusive Interview with CEO of Tech Company</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam erat volutpat.</p>
+                </article>
+            </section>
+            <!-- Add more sections with fake content -->
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 News Site</p>
+    </footer>
+</body>
+</html>
