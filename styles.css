@@ -94,16 +94,13 @@ section {
 }
 
 .rightcolumn {
-    width: 30%; /* Adjust width for the side column */
+    width: 30%; 
+    height: 100%;/* Adjust width for the side column */
     box-sizing: border-box; /* Ensure box-sizing includes padding and border */
     padding: 20px; /* Add padding to the side column */
 }
 
-#main-content {
-    width: 65%; /* Adjust width for the main content */
-    box-sizing: border-box; /* Ensure box-sizing includes padding and border */
-    padding: 20px; /* Add padding to the main content */
-}
+
 
 .box {
     background-color: #fff;
@@ -174,3 +171,14 @@ article h3,
     font-size: 24px;
     margin-top: 0;
 }
+
+.rightside {
+    float: right;
+    width: 30%; /* Adjust width as needed */
+  }
+  
+  .rightcolumn {
+    float: left;
+    width: 70%; /* Adjust width as needed */
+  }
+  
