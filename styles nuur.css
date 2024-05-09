@@ -206,17 +206,27 @@ article h3,
 }
 
 .pair {
-    width: 100%; /* Each pair takes full width of the container */
-    box-sizing: border-box; /* Ensure box-sizing includes padding and border */
-    padding: 0 10px; /* Adjust padding for each pair */
-    display: flex; /* Use flexbox for alignment */
-    justify-content: space-between; /* Ensure equal spacing between pairs */
+    width: calc(50% - 20px); /* Each pair takes half of the available space minus some padding */
+    margin-bottom: 20px;
+    float: left; /* Float pairs to the left to align them horizontally */
 }
 
-/* Ensure that both sections in each pair have equal width */
-.pair section {
-    width: calc(50% - 10px); /* Each section in the pair takes half of the available space minus padding */
-    box-sizing: border-box; /* Ensure box-sizing includes padding and border */
-    padding: 0 5px; /* Adjust padding for each section */
+.big-section {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    clear: both;
+    width: calc(50% - 20px); /* Adjust width to occupy one section */
 }
 
+
+/* If you want to style the content inside the big section */
+.big-section h2 {
+    margin-bottom: 20px;
+}
+
+.big-section img {
+    max-width: 100%; /* Ensure the image doesn't exceed the width of its container */
+}
